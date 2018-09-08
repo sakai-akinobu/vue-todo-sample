@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "$(npm bin)/webpack-serve --config webpack.config.js --content public",
     "build": "$(npm bin)/webpack --config webpack.config.js"
   },
   "author": "Akinobu SAKAI <sakai.akinobu@gmail.com> (https://github.com/sakai-akinobu)",
