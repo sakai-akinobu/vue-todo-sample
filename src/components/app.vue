@@ -1,11 +1,13 @@
 <template>
   <div>
     <Input :value="input" :onChange="changeInput" :onEnter="addTodo" />
+    <TodoList :todos="todos" :toggleComplete="toggleComplete" />
   </div>
 </template>
 
 <script>
 import input from './input.vue';
+import todoList from './todoList.vue';
 
 export default {
   data() {
@@ -19,15 +21,19 @@ export default {
       this.input = value;
     },
     addTodo(title) {
-      this.todos.push({
+      this.todos.unshift({
         title,
         completed: false,
       });
       this.input = '';
-    }
+    },
+    toggleComplete(todo) {
+      todo.completed = !todo.completed;
+    },
   },
   components: {
     Input: input,
+    TodoList: todoList,
   },
 };
 </script>
