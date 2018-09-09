@@ -2,12 +2,14 @@
   <div>
     <Input :value="input" :onChange="changeInput" :onEnter="addTodo" />
     <TodoList :todos="todos" :toggleComplete="toggleComplete" />
+    <ClearCompleteButton :onClick="clearComplete" :disabled="!hasComplete" />
   </div>
 </template>
 
 <script>
 import Input from './Input.vue';
 import TodoList from './TodoList.vue';
+import ClearCompleteButton from './ClearCompleteButton.vue';
 
 export default {
   data() {
@@ -30,10 +32,19 @@ export default {
     toggleComplete(todo) {
       todo.completed = !todo.completed;
     },
+    clearComplete() {
+      this.todos = this.todos.filter(todo => !todo.completed);
+    },
+  },
+  computed: {
+    hasComplete() {
+      return this.todos.some(todo => todo.completed);
+    },
   },
   components: {
     Input,
     TodoList,
+    ClearCompleteButton,
   },
 };
 </script>

@@ -15,7 +15,7 @@ export default {
     },
     handleEnter(e) {
       this.onEnter(e.target.value);
-    }
+    },
   },
 };
 </script>

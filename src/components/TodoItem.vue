@@ -1,5 +1,5 @@
 <template>
-  <div v-bind:class="{completed: todo.completed}" @click="handleClick">
+  <div :class="{completed: todo.completed}" @click="handleClick">
     <input type="checkbox" :checked="todo.completed" />
     <span>{{ todo.title }}</span>
   </div>
