@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import input from './input.vue';
-import todoList from './todoList.vue';
+import Input from './Input.vue';
+import TodoList from './TodoList.vue';
 
 export default {
   data() {
@@ -32,8 +32,8 @@ export default {
     },
   },
   components: {
-    Input: input,
-    TodoList: todoList,
+    Input,
+    TodoList,
   },
 };
 </script>

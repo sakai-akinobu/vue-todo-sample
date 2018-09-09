@@ -1,9 +1,9 @@
 import Vue from 'vue';
 
-import app from './components/app.vue';
+import App from './components/App.vue';
 
 // eslint-disable-next-line no-new
 new Vue({
   el: '#app',
-  components: { app },
+  components: { App },
 });

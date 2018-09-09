@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import todo from './todo.vue';
+import Todo from './Todo.vue';
 
 export default {
   props: {
@@ -15,7 +15,7 @@ export default {
     toggleComplete: Function,
   },
   components: {
-    Todo: todo,
+    Todo,
   },
 };
 </script>
