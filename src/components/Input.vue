@@ -1,5 +1,11 @@
 <template>
-  <input :value="value" @input="handleInput" @keyup.enter="handleEnter" />
+  <input
+    :value="value"
+    @input="handleInput"
+    @keyup.enter="handleEnter"
+    placeholder="What needs to be done?"
+    class="input"
+  />
 </template>
 
 <script>
@@ -19,3 +25,10 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.input {
+  width: 300px;
+  font-size: 1.2em;
+}
+</style>

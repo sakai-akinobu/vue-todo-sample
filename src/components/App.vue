@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1>Vue Todo list sample</h1>
     <Input :value="input" :onChange="changeInput" :onEnter="addTodo" />
     <TodoList :todos="todos" :toggleComplete="toggleComplete" />
     <ClearCompleteButton :onClick="clearComplete" :disabled="!hasComplete" />
